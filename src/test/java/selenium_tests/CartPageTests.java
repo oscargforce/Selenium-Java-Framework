@@ -10,8 +10,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageobjects.CartPage;
 import web_element_behaviour.Expect;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class CartPageTests extends BaseTest {

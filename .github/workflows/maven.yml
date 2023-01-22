@@ -27,10 +27,6 @@ jobs:
         java-version: '16'
         distribution: 'temurin'
         cache: maven
-    - name: Download dependencies
-      run: mvn -B package --file pom.xml
-
-    e2e:
     - name: e2e tests
-      run: mvn clean test -Dheadless=true -Dsurefire.suiteXmlFiles=headless.xml
+      run: mvn clean test -Dheadless=true -Dsurefire.suiteXmlFiles=testng.yaml
       

@@ -33,16 +33,15 @@ jobs:
       continue-on-error: true
 
     - name: Generate allure report
-      run: npm install -g allure-commandline
-           allure generate --clean
+      run: npm install -g allure-commandline && allure generate --clean
 
     - name: store artifact
       uses: actions/upload-artifact@v3
       if: always()
       continue-on-error: true
       with:
-        name: allure-result
-        path: allure-results
+        name: allure-report
+        path: allure-report
         retention-days: 1
 
 

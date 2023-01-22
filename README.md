@@ -22,8 +22,3 @@ Steps left for me to do for the framework.
 2. Add dockerImg
 3. Add videos to allure by docker img and webdriverManager.
 4. Enable headless mode feature
-
-1. Inputs auto wait. Done
-3. Add better logs to allure reporter. Done.
-4. Think of folder structure.  Done.
-5. In before or teardown add clear cookies / local storage in the browser, for clean tests. Done

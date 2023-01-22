@@ -14,7 +14,7 @@
 mvn clean test -Dbrowser=value
 mvn clean test -Dsurefire.suiteXmlFiles=value,multiplexmls
 
-mvn clean test -Dsurefire.suiteXmlFiles=headless.xml -Dheadless=true
+mvn clean test -Dheadless=true -Dsurefire.suiteXmlFiles=headless.xml
 
 Steps left for me to do for the framework.
 

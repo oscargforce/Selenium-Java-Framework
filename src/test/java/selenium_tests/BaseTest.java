@@ -2,9 +2,7 @@ package selenium_tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Step;
-import io.restassured.http.Cookies;
 import org.openqa.selenium.Cookie;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -38,33 +36,33 @@ public class BaseTest {
 
     @Parameters("browser")
     @BeforeMethod(alwaysRun = true)
-    protected void launchBrowser(@Optional("edge") String Browser) {
-       String browser = System.getProperty("browser") == null ? Browser : System.getProperty("browser");
-       String headless = System.getProperty("headless") != null ? System.getProperty("headless") : "headed";
+    protected void launchBrowser(@Optional("chrome") String Browser) {
+        String browser = System.getProperty("browser") == null ? Browser : System.getProperty("browser");
+        String headless = System.getProperty("headless") != null ? System.getProperty("headless") : "headed";
         switch (browser.toLowerCase()) {
             case "chrome" -> {
                 WebDriverManager.chromedriver().cachePath("Drivers").setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--no-sandbox");
-                chromeOptions.addArguments("disable-gpu");
+                chromeOptions.addArguments("--no-sandbox", "--disable-gpu");
                 if (headless.equals("true")) chromeOptions.addArguments("--headless", "--window-size=1280,858");
                 this.setDriver(new ChromeDriver(chromeOptions));
             }
             case "firefox" -> {
                 WebDriverManager.firefoxdriver().cachePath("Drivers").setup();
-                FirefoxOptions options = new FirefoxOptions();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
                 if (headless.equals("true")) {
-                options.setHeadless(true);
-                options.addArguments("--width=1280");
-                options.addArguments("--height=858");
+                    firefoxOptions.setHeadless(true);
+                    firefoxOptions.addArguments("--width=1280");
+                    firefoxOptions.addArguments("--height=858");
                 }
-                this.setDriver(new FirefoxDriver(options));
+                this.setDriver(new FirefoxDriver(firefoxOptions));
             }
             case "edge" -> {
                 WebDriverManager.edgedriver().cachePath("Drivers").setup();
-                EdgeOptions options = new EdgeOptions();
-                if (headless.equals("true")) options.addArguments("--headless", "--window-size=1280,858");
-                this.setDriver(new EdgeDriver(options));
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--no-sandbox", "--disable-gpu");
+                if (headless.equals("true")) edgeOptions.addArguments("--headless", "--window-size=1280,858");
+                this.setDriver(new EdgeDriver(edgeOptions));
             }
             default ->
                     throw new IllegalStateException("Invalid browser name: " + browser + ", pick any of the following values: chrome | edge | firefox");
@@ -92,12 +90,13 @@ public class BaseTest {
         String baseUrl = ConfigLoader.getInstance().getBaseUrl();
         driver.get(baseUrl + endpoint);
     }
+
     @BeforeSuite
-    private void deleteAllureResultsDirectory(){
+    private void deleteAllureResultsDirectory() {
         File allureResultsDirectory = new File("allure-results");
-        if(allureResultsDirectory.exists()){
+        if (allureResultsDirectory.exists()) {
             String[] filesInDirectory = allureResultsDirectory.list();
-            for (String file : filesInDirectory){
+            for (String file : filesInDirectory) {
                 File currentFile = new File(allureResultsDirectory.getPath(), file);
                 currentFile.delete();
             }
@@ -107,7 +106,7 @@ public class BaseTest {
 
     public void addProductToCartApi(String productId, String quantity) throws FileNotFoundException {
         List<Cookie> cookies = new CartApi().addItemToCart(productId, quantity);
-        for (Cookie cookie:cookies)
+        for (Cookie cookie : cookies)
             getDriver().manage().addCookie(cookie);
     }
 }

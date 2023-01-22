@@ -10,7 +10,6 @@ public class SearchComponent {
     private final PerformWebElementActions perform;
     private final By searchInputElement = By.cssSelector("#woocommerce-product-search-field-0");
     private final By searchBtnElement = By.cssSelector("form[role='search'] button");
-
     private final By browseByCategorySelectElement = By.cssSelector("#product_cat");
 
     public SearchComponent(WebDriver driver) throws FileNotFoundException {

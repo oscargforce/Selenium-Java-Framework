@@ -1,7 +1,0 @@
-{
-  "requiredFieldsErrorMessage": "Billing First name is a required field.\nBilling Last name is a required field.\nBilling Street address is a required field.\nBilling Town / City is a required field.\nBilling ZIP Code is a required field.\nBilling Email address is a required field.",
-  "shipToADifferentAddress": "Ship to a different address?",
-  "placeOrder": "PLACE ORDER",
-  "createAnAccount": "Create an account?"
-
-}

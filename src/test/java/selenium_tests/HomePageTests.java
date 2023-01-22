@@ -1,8 +1,6 @@
 package selenium_tests;
 
 import io.qameta.allure.Description;
-import io.restassured.http.Cookie;
-import io.restassured.http.Cookies;
 import json_utilities.HomePageTextsPojo;
 import json_utilities.JsonUtility;
 import org.openqa.selenium.By;
@@ -10,11 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageobjects.home_page.HomePage;
-import utilities.CartApi;
 import web_element_behaviour.Expect;
-
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomePageTests extends BaseTest {

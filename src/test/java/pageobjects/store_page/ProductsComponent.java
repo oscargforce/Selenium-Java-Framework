@@ -9,14 +9,13 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 public class ProductsComponent {
+    public By addToCartBtnElements = By.cssSelector(".add_to_cart_button");
+    public By headerTitleElement = By.cssSelector("h1[class*='page-title']");
     private final PerformWebElementActions perform;
     private final By sortProductsSelectElement = By.cssSelector("select[name='orderby']");
     private final By productTitleElements = By.cssSelector("h2[class*='product__title']");
     private final By priceTagElements = By.cssSelector("#main .woocommerce-Price-amount");
-
     private final By productCategoryTagElements = By.cssSelector("span[class='ast-woo-product-category']");
-    public By addToCartBtnElements = By.cssSelector(".add_to_cart_button");
-    public By headerTitleElement = By.cssSelector("h1[class*='page-title']");
 
 
     public ProductsComponent(WebDriver driver) throws FileNotFoundException {

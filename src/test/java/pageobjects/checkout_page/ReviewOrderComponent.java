@@ -8,11 +8,11 @@ import web_element_behaviour.PerformWebElementActions;
 import java.io.FileNotFoundException;
 
 public class ReviewOrderComponent {
-    private final By directBankTransferOptionElement = By.cssSelector("label[for='payment_method_bacs']");
-    private final By cashOnDeliveryOptionElement = By.cssSelector("label[for='payment_method_cod']");
+    private PerformWebElementActions perform;
     public By placeOrderBtnElement = By.cssSelector("#place_order");
     public By orderHasBeenPlacedSuccessfullyElement = By.cssSelector(".woocommerce-order p");
-    private PerformWebElementActions perform;
+    private final By directBankTransferOptionElement = By.cssSelector("label[for='payment_method_bacs']");
+    private final By cashOnDeliveryOptionElement = By.cssSelector("label[for='payment_method_cod']");
 
     public ReviewOrderComponent(WebDriver driver) throws FileNotFoundException {
         this.perform = PerformWebElementActions.getInstance(driver);

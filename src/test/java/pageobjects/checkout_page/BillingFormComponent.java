@@ -9,6 +9,12 @@ import web_element_behaviour.PerformWebElementActions;
 import java.io.FileNotFoundException;
 
 public class BillingFormComponent {
+    private PerformWebElementActions perform;
+    public By requiredFieldsErrorMsgElement = By.cssSelector("ul[class='woocommerce-error']");
+    public By createAnAccountLabelElement = By.cssSelector(".woocommerce-account-fields label[class*='woocommerce-form__label']");
+    public By accountUsernameInputElement = By.cssSelector("#account_username");
+    public By shipToADifferentAddressTitleElement = By.cssSelector("#ship-to-different-address");
+    public By shipToADifferentAddressFormElement = By.cssSelector("#shipping_first_name");
     private final By firstNameInputElement = By.cssSelector("#billing_first_name");
     private final By lastNameInputElement = By.cssSelector("#billing_last_name");
     private final By countryInputElement = By.cssSelector("#select2-billing_country-container");
@@ -19,12 +25,6 @@ public class BillingFormComponent {
     private final By emailInputElement = By.cssSelector("#billing_email");
     private final By shipToADifferentAddressCheckBoxElement = By.cssSelector("#ship-to-different-address-checkbox");
     private final By createAnAccountCheckBoxElement = By.cssSelector("#createaccount");
-    public By requiredFieldsErrorMsgElement = By.cssSelector("ul[class='woocommerce-error']");
-    public By createAnAccountLabelElement = By.cssSelector(".woocommerce-account-fields label[class*='woocommerce-form__label']");
-    public By accountUsernameInputElement = By.cssSelector("#account_username");
-    public By shipToADifferentAddressTitleElement = By.cssSelector("#ship-to-different-address");
-    public By shipToADifferentAddressFormElement = By.cssSelector("#shipping_first_name");
-    private PerformWebElementActions perform;
 
     public BillingFormComponent(WebDriver driver) throws FileNotFoundException {
         this.perform = PerformWebElementActions.getInstance(driver);

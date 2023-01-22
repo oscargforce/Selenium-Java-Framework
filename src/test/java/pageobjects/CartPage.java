@@ -9,17 +9,17 @@ import java.util.regex.Pattern;
 
 public class CartPage {
     private PerformWebElementActions perform;
-    private By proceedToCheckoutBtnElement = By.cssSelector("a[href*='/checkout']");
     public By productTitleElement = By.cssSelector("[data-title='Product']");
     public By priceTitleElement = By.cssSelector("[data-title='Price']");
-    private By quantityInputElement = By.cssSelector("[data-title='Quantity'] input");
     public By subtotalTitleElement = By.cssSelector("[data-title='Subtotal']");
-    private By updateCartBtnElement = By.cssSelector("[name='update_cart']");
     public By couponDoesNotExistMsgElement = By.cssSelector("ul[class='woocommerce-error']");
+    public By yourItemWasRemovedFromCartMsgElement = By.cssSelector(".woocommerce-notices-wrapper .woocommerce-message");
+    private By proceedToCheckoutBtnElement = By.cssSelector("a[href*='/checkout']");
     private By couponInputElement = By.cssSelector("#coupon_code");
     private By applyCouponBtnElement = By.cssSelector("button[name='apply_coupon']");
     private By restoreItemToCartBtnElement = By.cssSelector(".restore-item");
-    public By yourItemWasRemovedFromCartMsgElement = By.cssSelector(".woocommerce-notices-wrapper .woocommerce-message");
+    private By updateCartBtnElement = By.cssSelector("[name='update_cart']");
+    private By quantityInputElement = By.cssSelector("[data-title='Quantity'] input");
 
     public CartPage(WebDriver driver) throws FileNotFoundException {
         perform = PerformWebElementActions.getInstance(driver);

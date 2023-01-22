@@ -9,9 +9,9 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 public class FeaturedProductsComponent {
+    public By featuredProductsItemsElement = By.cssSelector("ul[class='products columns-5'] li");
     private final By addToCartBtnElements = By.cssSelector("ul[class='products columns-5'] li .add_to_cart_button");
     private final By commercialInfoTitleElements = By.cssSelector("h6[class='has-text-align-center']");
-    public By featuredProductsItemsElement = By.cssSelector("ul[class='products columns-5'] li");
     private PerformWebElementActions perform;
 
     public FeaturedProductsComponent(WebDriver driver) throws FileNotFoundException {

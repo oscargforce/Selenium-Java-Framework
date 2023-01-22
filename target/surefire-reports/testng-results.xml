@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-22T15:22:28 CET" name="Suite1" finished-at="2023-01-22T15:22:40 CET" duration-ms="12022">
+    <groups>
+    </groups>
+    <test started-at="2023-01-22T15:22:28 CET" name="Regression2" finished-at="2023-01-22T15:22:40 CET" duration-ms="12022">
+      <class name="selenium_tests.HomePageTests">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:28 CET" name="launchBrowser" finished-at="2023-01-22T15:22:30 CET" duration-ms="1975" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:30 CET" name="initPageObjects" finished-at="2023-01-22T15:22:30 CET" duration-ms="417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="addFeaturedProductsToCart()[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:30 CET" name="addFeaturedProductsToCart" finished-at="2023-01-22T15:22:34 CET" duration-ms="4108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addFeaturedProductsToCart -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:34 CET" name="tearDown" finished-at="2023-01-22T15:22:35 CET" duration-ms="61" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addFeaturedProductsToCart status=SUCCESS method=HomePageTests.addFeaturedProductsToCart()[pri:0, instance:selenium_tests.HomePageTests@9fec931] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:35 CET" name="launchBrowser" finished-at="2023-01-22T15:22:35 CET" duration-ms="438" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:35 CET" name="initPageObjects" finished-at="2023-01-22T15:22:35 CET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="commercialInfoToBeVisible()[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:35 CET" name="commercialInfoToBeVisible" finished-at="2023-01-22T15:22:36 CET" duration-ms="1119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- commercialInfoToBeVisible -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:36 CET" name="tearDown" finished-at="2023-01-22T15:22:36 CET" duration-ms="57" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=commercialInfoToBeVisible status=SUCCESS method=HomePageTests.commercialInfoToBeVisible()[pri:0, instance:selenium_tests.HomePageTests@9fec931] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:36 CET" name="launchBrowser" finished-at="2023-01-22T15:22:37 CET" duration-ms="417" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:37 CET" name="initPageObjects" finished-at="2023-01-22T15:22:37 CET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="featuredProductsToBeVisible()[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:37 CET" name="featuredProductsToBeVisible" finished-at="2023-01-22T15:22:38 CET" duration-ms="1189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- featuredProductsToBeVisible -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:38 CET" name="tearDown" finished-at="2023-01-22T15:22:38 CET" duration-ms="57" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=featuredProductsToBeVisible status=SUCCESS method=HomePageTests.featuredProductsToBeVisible()[pri:0, instance:selenium_tests.HomePageTests@9fec931] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:38 CET" name="launchBrowser" finished-at="2023-01-22T15:22:38 CET" duration-ms="428" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:38 CET" name="initPageObjects" finished-at="2023-01-22T15:22:38 CET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="findMoreButtonNavigation()[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:38 CET" name="findMoreButtonNavigation" finished-at="2023-01-22T15:22:40 CET" duration-ms="1533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findMoreButtonNavigation -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:selenium_tests.HomePageTests@9fec931]" started-at="2023-01-22T15:22:40 CET" name="tearDown" finished-at="2023-01-22T15:22:40 CET" duration-ms="57" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=findMoreButtonNavigation status=SUCCESS method=HomePageTests.findMoreButtonNavigation()[pri:0, instance:selenium_tests.HomePageTests@9fec931] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- selenium_tests.HomePageTests -->
+    </test> <!-- Regression2 -->
+  </suite> <!-- Suite1 -->
+</testng-results>

@@ -30,10 +30,10 @@ public class CartApi {
         Response response = given().
                 baseUri(ConfigLoader.getInstance().getBaseUrl()).
                 headers(headers).
-                formParams(formData).log().all().
+                formParams(formData).
                 when().
                 post("/?wc-ajax=add_to_cart").
-                then().log().all().
+                then().
                 extract().response();
         if (response.getStatusCode() >= 400) throw new RuntimeException(response.asPrettyString());
         Cookies cookies = response.getDetailedCookies();

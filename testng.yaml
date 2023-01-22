@@ -1,0 +1,37 @@
+name: TestSuite1
+threadCount: 4
+parallel: tests
+
+listeners:
+  - utilities.GlobalRetryAnnotater
+
+tests:
+  - name: Home page tests
+    parameters: { browser: chrome }
+    classes:
+      - selenium_tests.HomePageTests
+
+  - name: Store page tests
+    parameters: { browser: chrome }
+    classes:
+      - selenium_tests.StorePageTests
+
+  - name: e2e tests
+    parameters: { browser: firefox }
+    classes:
+      - selenium_tests.e2e
+
+  - name: Header navigation bar tests
+    parameters: { browser: firefox }
+    classes:
+      - selenium_tests.HeaderNavBarTests
+
+  - name: Cart page tests
+    parameters: { browser: chrome }
+    classes:
+      - selenium_tests.CartPageTests
+
+  - name: Checkout page tests
+    parameters: { browser: chrome }
+    classes:
+      - selenium_tests.CheckoutPageTests

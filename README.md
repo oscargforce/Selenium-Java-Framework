@@ -59,12 +59,12 @@ Is the current script running in the [pipelines](https://github.com/oscargforce/
 mvn clean test -Dheadless=true -Dsurefire.suiteXmlFiles=testng.yaml
 ````
 
-Documentation
+## Documentation
  - [Expect assertions](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/Expect.md)
  - [Web element behaviour / Auto waits](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/WebElementBehaviour.md)
 
 Steps left for me to do for the framework.
 
-1. Add dockerImg
+1. Add dockerImg.
 2. Add video recordings to allure by docker img and webdriverManager.
 

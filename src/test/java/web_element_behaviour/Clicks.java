@@ -15,15 +15,15 @@ public class Clicks extends WebElementBehaviourBase {
 
     private void waitUntilElementIsClickable(By locator) {
         try {
-            this.wait.until((driver) -> driver.findElement(locator).isDisplayed() && driver.findElement(locator).isEnabled());
+            wait.until((driver) -> driver.findElement(locator).isDisplayed() && driver.findElement(locator).isEnabled());
         } catch (Exception e) {
-            throw new TimeoutException("Tried waiting for " + this.time + " seconds for locator: " + locator + " to be clickable. ");
+            throw new TimeoutException("Tried waiting for " + waitForElementTimeOut + " seconds for locator: " + locator + " to be clickable. ");
         }
     }
 
     public void webDriverClick(By locator) throws Exception {
-        this.waitUntilElementIsClickable(locator);
-        this.scrollIntoViewIfNeeded(locator);
+        waitUntilElementIsClickable(locator);
+        scrollIntoViewIfNeeded(locator);
         wait.until((driver) -> {
             try {
                 driver.findElement(locator).click();

@@ -55,7 +55,7 @@ public class Expect extends WebElementBehaviourBase {
             locator = null;
         } catch (TimeoutException e) {
             String actualText = driver.findElement(locator).getText();
-            throw new AssertionError(this.customErrorMessage(locator, actualText, expectedText, "text content"));
+            throw new AssertionError(customErrorMessage(locator, actualText, expectedText, "text content"));
         }
     }
 
@@ -68,7 +68,7 @@ public class Expect extends WebElementBehaviourBase {
             locator = null;
         } catch (TimeoutException e) {
             String actualText = element.getText();
-            throw new AssertionError(this.customErrorMessage(locator, actualText, expectedText, "text content") + e);
+            throw new AssertionError(customErrorMessage(locator, actualText, expectedText, "text content") + e);
         }
     }
 
@@ -83,7 +83,7 @@ public class Expect extends WebElementBehaviourBase {
             locator = null;
         } catch (TimeoutException e) {
             String actualText = driver.findElement(locator).getText();
-            softAssert.assertEquals(actualText, expectedText, this.customErrorMessage(locator, actualText, expectedText, "text content"));
+            softAssert.assertEquals(actualText, expectedText, customErrorMessage(locator, actualText, expectedText, "text content"));
         }
         return softAssert;
     }
@@ -98,12 +98,12 @@ public class Expect extends WebElementBehaviourBase {
         waitForLocatorToBeVisible(locator);
         scrollIntoViewIfNeeded(locator);
         try {
-            this.assertionWait.until(driver -> driver.findElement(locator).getText().equals(expectedText));
+            assertionWait.until(driver -> driver.findElement(locator).getText().equals(expectedText));
             element = null;
             locator = null;
         } catch (TimeoutException e) {
             String actualText = driver.findElement(locator).getText();
-            throw new AssertionError(this.customErrorMessage(locator, actualText, expectedText, "text content") + e);
+            throw new AssertionError(customErrorMessage(locator, actualText, expectedText, "text content") + e);
         }
     }
 
@@ -111,27 +111,27 @@ public class Expect extends WebElementBehaviourBase {
         waitForLocatorToBeVisible(locator);
         scrollIntoViewIfNeeded(locator);
         try {
-            this.assertionWait.until(driver -> element.getText().equals(expectedText));
+            assertionWait.until(driver -> element.getText().equals(expectedText));
             element = null;
             locator = null;
         } catch (TimeoutException e) {
             String actualText = element.getText();
-            throw new AssertionError(this.customErrorMessage(locator, actualText, expectedText, "text content") + e);
+            throw new AssertionError(customErrorMessage(locator, actualText, expectedText, "text content") + e);
         }
     }
 
     @Step("toHaveText: {expectedText}")
-    public SoftAssert softAssertToHaveText(String expectedText) throws AssertionError {
+    public SoftAssert softAssertToHaveText(String expectedText) {
         if (element != null) locator = this.convertWebElementToByLocator(element);
         waitForLocatorToBeVisible(locator);
         scrollIntoViewIfNeeded(locator);
         try {
-            this.assertionWait.until(driver -> driver.findElement(locator).getText().equals(expectedText));
+            assertionWait.until(driver -> driver.findElement(locator).getText().equals(expectedText));
             element = null;
             locator = null;
         } catch (TimeoutException e) {
             String actualText = driver.findElement(locator).getText();
-            softAssert.assertEquals(actualText, expectedText, this.customErrorMessage(locator, actualText, expectedText, "text content"));
+            softAssert.assertEquals(actualText, expectedText, customErrorMessage(locator, actualText, expectedText, "text content"));
         }
         return softAssert;
     }
@@ -139,10 +139,10 @@ public class Expect extends WebElementBehaviourBase {
     @Step("expect url to containText: {expectedText}")
     public void urlToContainText(String expectedText) throws AssertionError {
         try {
-            this.assertionWait.until(driver -> driver.getCurrentUrl().contains(expectedText));
+            assertionWait.until(driver -> driver.getCurrentUrl().contains(expectedText));
         } catch (TimeoutException e) {
             String actualText = driver.getCurrentUrl();
-            throw new AssertionError(this.customErrorMessage(locator, actualText, expectedText, "url") + e);
+            throw new AssertionError(customErrorMessage(locator, actualText, expectedText, "url") + e);
         }
     }
 

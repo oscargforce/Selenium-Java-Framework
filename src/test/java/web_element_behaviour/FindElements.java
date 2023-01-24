@@ -13,9 +13,9 @@ public class FindElements extends WebElementBehaviourBase {
     }
 
     public List<WebElement> getList(By locator) {
-        this.waitUntilElementIsDisplayed(locator);
-        this.scrollIntoViewIfNeeded(locator);
-        return this.driver.findElements(locator);
+        waitUntilElementIsDisplayed(locator);
+        scrollIntoViewIfNeeded(locator);
+        return driver.findElements(locator);
     }
 
 }

@@ -10,18 +10,18 @@ import java.io.FileNotFoundException;
 import java.time.Duration;
 
 public class WebElementBehaviourBase {
-    protected int time;
+    protected int waitForElementTimeOut;
     protected int assertionTimeOut;
 
     protected WebDriver driver;
     protected FluentWait<WebDriver> wait;
-    protected FluentWait<WebDriver> assertionWait;;
+    protected FluentWait<WebDriver> assertionWait;
     protected  JavascriptExecutor javascript;
 
     public WebElementBehaviourBase(WebDriver driver) throws FileNotFoundException {
         this.driver = driver;
-        this.time = ConfigLoader.getInstance().getWaitForElementTimeOut();
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(time)).ignoring(StaleElementReferenceException.class);
+        this.waitForElementTimeOut = ConfigLoader.getInstance().getWaitForElementTimeOut();
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(waitForElementTimeOut)).ignoring(StaleElementReferenceException.class);
         this.assertionTimeOut = ConfigLoader.getInstance().getAssertionTimeOut();
         this.assertionWait = new WebDriverWait(driver, Duration.ofSeconds(assertionTimeOut)).ignoring(StaleElementReferenceException.class);
         this.javascript = (JavascriptExecutor) driver;

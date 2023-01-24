@@ -27,7 +27,6 @@ public class e2e extends BaseTest {
     public void endToEndBuyAProduct() throws Exception {
         StorePage storePage = pages.getStorePage;
         CheckoutPage checkoutPage = pages.getCheckoutPage;
-
         goToWebSite("/");
         pages.getHomePage.getHeaderComponent.navigateToTheStorePage();
         storePage.getSearchComponent.searchForProduct("blue");

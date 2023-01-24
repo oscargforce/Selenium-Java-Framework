@@ -12,7 +12,6 @@ public class Clicks extends WebElementBehaviourBase {
     public Clicks(WebDriver driver) throws FileNotFoundException {
         super(driver);
     }
-
     private void waitUntilElementIsClickable(By locator) {
         try {
             wait.until((driver) -> driver.findElement(locator).isDisplayed() && driver.findElement(locator).isEnabled());

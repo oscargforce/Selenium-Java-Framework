@@ -34,21 +34,21 @@ firefox | edge | chrome
 ````
 Browser can also be set as a parameter in the testng.yaml file.
 ```yaml
-  # now runs the same test class for all different browsers
+  # now runs the same tests in all browsers in parallel.
   - name: Home page tests
     parameters: { browser: chrome }
     classes:
       - selenium_tests.HomePageTests
 
-  - name: Store page tests
-    parameters: { browser: chrome }
+  - name: Home page tests
+    parameters: { browser: edge }
     classes:
-      - selenium_tests.StorePageTests
+      - selenium_tests.HomePageTests
 
-  - name: e2e tests
+  - name: Home page tests
     parameters: { browser: firefox }
     classes:
-      - selenium_tests.e2e
+      - selenium_tests.HomePageTests
 ```
 runs in headless mode for all browsers if environment variable is set to true
 ````shell
@@ -59,12 +59,12 @@ Is the current script running in the [pipelines](https://github.com/oscargforce/
 mvn clean test -Dheadless=true -Dsurefire.suiteXmlFiles=testng.yaml
 ````
 
-## Documentation
- -
+Documentation
+ - [Expect assertions](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/Expect.md)
+ - [Web element behaviour / Auto waits](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/WebElementBehaviour.md)
 
 Steps left for me to do for the framework.
 
-1. CI set up. 
-2. Add dockerImg
-3. Add videos to allure by docker img and webdriverManager.
-4. Enable headless mode feature
+1. Add dockerImg
+2. Add video recordings to allure by docker img and webdriverManager.
+

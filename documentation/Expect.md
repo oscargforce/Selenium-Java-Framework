@@ -51,8 +51,10 @@ Expect class extends [WebElementBehaviour]() class for its method to reduce dupl
 
 Assertions can be made with both data types "By" & "WebElement".  
 OBS!!!
+- TLDR, use "By" when possible, and only use "WebElement" if you know that the page is not dynamically changing. 
  - Whenever possible, use "By" instead of "WebElement". When WebElement is used, we will point to the same WebElement during the retries. If it's caught with [StaleElementReferenceException](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/StaleElementReferenceException.html) and we point to the same stale element, the test will fail due to the stale element exception.
- - One has to send out a new findElement request to get rid of the stale element, which is done only with data type By. Sometimes we convert WebElement back to a By locator, but for looping through a List of WebElements, sending out a new driver.findElement screws the index.
+ - One has to send out a new findElement request to get rid of the stale element, which is done only with data type By. 
+I solved this issue by converting the WebElement back to a By locator, but it backfired when looping through a List of WebElements, sending out a new driver.findElement screws the index.
 
 The below code snippets are simplified version, [see the exact code here](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/src/test/java/web_element_behaviour/WebElementBehaviourBase.java)
 ````java
@@ -60,9 +62,9 @@ The below code snippets are simplified version, [see the exact code here](https:
 @Test
 public void exampleTest() {
     goToWebSite("/");
-    // Set the locator
+    // Create the locator
     By headerTitle = By.cssSelector("#title");
-    // Step 1: "element" acts as a setter.
+    // Step 1: Method: "element" is a setter in the Epect class.
     expect.element(headerTitle).toHaveText("Selenium");
 }
 

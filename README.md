@@ -59,9 +59,17 @@ Is the current script running in the [pipelines](https://github.com/oscargforce/
 mvn clean test -Dheadless=true -Dsurefire.suiteXmlFiles=testng.yaml
 ````
 
+Set different environment, default is staging.
+````shell
+mvn clean test -Denv=develop
+````
+
 ## Documentation
  - [Expect assertions](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/Expect.md)
  - [Web element behaviour / Auto waits](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/WebElementBehaviour.md)
+ - [JsonUtility]()
+ - [Config]()
+ - [How page objects are designed]()
 
 Steps left for me to do for the framework.
 

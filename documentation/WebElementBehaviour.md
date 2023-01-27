@@ -8,8 +8,7 @@ web actions, such as clicks / fill input, selet dropdowns and more.
 I went with a simple and scalable approach. One class was created for each type of interaction with the HTML.  
 One base class was added to hold common methods and to initialize FluentWait && Webdriver wait once.
 
-[PerformWebActions](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/src/test/java/web_element_behaviour/PerformWebElementActions.java) creates an instance for each type of interactions. Which brings all types of interactions together in one class.
-The page could had extended the [PerformWebActions](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/src/test/java/web_element_behaviour/PerformWebElementActions.java) but I did not want to couple them so tight together and went for a singleton approach instead.
+[PerformWebActions](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/src/test/java/web_element_behaviour/PerformWebElementActions.java) creates an instance for each type of interaction, which brings all kinds of interactions together in one class. The page objects could have extended the [PerformWebActions](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/src/test/java/web_element_behaviour/PerformWebElementActions.java), but I did not want to bind them so tightly and went for a singleton approach instead.
 
 ![Alt text](images/web-el-behaviour.png)
 

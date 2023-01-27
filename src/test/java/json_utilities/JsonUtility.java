@@ -12,5 +12,4 @@ public class JsonUtility {
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(inputStream, T);
     }
-
 }

@@ -30,10 +30,10 @@ jobs:
 
     - name: e2e tests
       run: mvn clean test -Dheadless=true -Dsurefire.suiteXmlFiles=testng.yaml
-      continue-on-error: true
 
     - name: Generate allure report
       run: npm install -g allure-commandline && allure generate --clean
+      continue-on-error: true
 
     - name: store artifact
       uses: actions/upload-artifact@v3

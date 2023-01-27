@@ -67,9 +67,9 @@ mvn clean test -Denv=develop
 ## Documentation
  - [Expect assertions](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/Expect.md)
  - [Web element behaviour / Auto waits](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/WebElementBehaviour.md)
- - [JsonUtility]()
- - [Config]()
- - [How page objects are designed]()
+ - [JsonUtility](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/JsonUtility.md)
+ - [Config](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/Config.md)
+ - [How page objects are designed](https://github.com/oscargforce/Selenium-Java-Framework/blob/main/documentation/PageObjects.md)
 
 Steps left for me to do for the framework.
 

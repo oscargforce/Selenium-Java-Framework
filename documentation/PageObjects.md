@@ -52,5 +52,4 @@ public class SearchComponent {
 //  Single responsibility principle by default gives greater readability of the code.
  StorePage storePage = new StorePage(driver);
  storePage.getSearchComponent.searchForProduct("Denim blue jeans");
-
 ````

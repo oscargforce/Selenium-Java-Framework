@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Selenium and Java CI with Maven
 
 on:
   push:
@@ -33,6 +33,7 @@ jobs:
 
     - name: Generate allure report
       run: npm install -g allure-commandline && allure generate --clean
+      if: always()
       continue-on-error: true
 
     - name: store artifact

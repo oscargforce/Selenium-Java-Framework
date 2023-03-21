@@ -43,7 +43,7 @@ public class BaseTest {
             case "chrome" -> {
                 WebDriverManager.chromedriver().cachePath("Drivers").setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--no-sandbox", "--disable-gpu");
+                chromeOptions.addArguments("--no-sandbox", "--disable-gpu", "--remote-allow-origins=*");
                 if (headless.equals("true")) chromeOptions.addArguments("--headless", "--window-size=1280,858");
                 this.setDriver(new ChromeDriver(chromeOptions));
             }
